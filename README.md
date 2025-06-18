@@ -5,7 +5,7 @@ This is the official repo for the implementation of **NeuFG: Neural Fuzzy Geomet
 
 
 ## Setup
-#### Installation  
+### Installation  
 This code is built with pytorch 1.12.0 and pytorch3d 0.7.1. You can build the environment by running: 
 ```  
 conda create -n geoneus python=3.7  
@@ -35,11 +35,12 @@ pip install -r requirements.txt
   -tensorboard
 
 </details>
-#### Data  
+### Data  
 Download the DTU data from [Google Drive](https://drive.google.com/drive/folders/1p7Vq6VAm1g_qCJcHLeXeGXc0qEkO4Rme?usp=sharing), which provides the files on sparse points and image pairs. 
 You can place the data in the publicdata folder or you can change the confs to specify the location of the data. 
+
 ## Running 
--** Training**  
+- Training 
 ```
 python exp_runner.py --mode train --conf ./confs/womask.conf --case <case_name>
 ```  
@@ -47,10 +48,11 @@ python exp_runner.py --mode train --conf ./confs/womask.conf --case <case_name>
 ```
 python exp_runner.py --mode validate_mesh --conf ./confs/womask.conf --case <case_name> --is_continue
 ```
--** Evaluation**
+- Evaluation
 ```
 python eval.py --conf ./confs/womask.conf --case <case_name>
 ```
 And you can add --gpu to choose the GPU you want to use. 
+
 ## Acknowlegement
 Our code is partially based on [NeuS](https://github.com/Totoro97/NeuS) project and some code snippets are borrowed from [GeoNeus](https://github.com/GhiXu/Geo-Neus). The eval code is borrowed from [DTUeval-python](https://github.com/jzhangbs/DTUeval-python). Thanks for the authors of these great projects.

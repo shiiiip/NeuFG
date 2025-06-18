@@ -33,10 +33,10 @@ pip install -r requirements.txt
   -PyMCubes==0.1.2
   -pandas==1.3.5
   -tensorboard
-
 </details>
-### Data  
-Download the DTU data from [Google Drive](https://drive.google.com/drive/folders/1p7Vq6VAm1g_qCJcHLeXeGXc0qEkO4Rme?usp=sharing), which provides the files on sparse points and image pairs. 
+
+## Data Download 
+the DTU data from [Google Drive](https://drive.google.com/drive/folders/1p7Vq6VAm1g_qCJcHLeXeGXc0qEkO4Rme?usp=sharing), which provides the files on sparse points and image pairs. 
 You can place the data in the publicdata folder or you can change the confs to specify the location of the data. 
 
 ## Running 
@@ -44,7 +44,7 @@ You can place the data in the publicdata folder or you can change the confs to s
 ```
 python exp_runner.py --mode train --conf ./confs/womask.conf --case <case_name>
 ```  
--** Extract surface from trained model**
+- Extract surface from trained model
 ```
 python exp_runner.py --mode validate_mesh --conf ./confs/womask.conf --case <case_name> --is_continue
 ```
